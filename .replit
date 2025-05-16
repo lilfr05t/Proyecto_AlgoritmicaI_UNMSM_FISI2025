@@ -1,1 +1,16 @@
 run = "python3 codigo.py"
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 42793275
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 codigo.py"
