@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquimenu</title>
+</head>
+<body>
+
+<!-- Solo se muestra en la página principal -->
+{% if request.path == "/" %}
+<header>
+    <h1>Aquimenu</h1>
+    <p>Deliciosos menús a tu alcance</p>
+    
+    <!-- Menú de navegación principal -->
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/menu">Menú del Día</a>
+        <a href="/reservar">Reservar</a>
+        <a href="/reseñas">Reseñas</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+    <a href="#" class="cta">Iniciar sesión</a>
+</header>
+{% endif %}
+
+<!-- Menú del Día (solo se muestra en la página /menu) -->
+
+{% if menu_items %}
+<section id="menu-del-dia">
+    <h2>Menú del Día</h2>
+    <div class="menu-items">
+        {% for item in menu_items %}
+        <div class="menu-item">
+            <!-- Imagen del plato -->
+            <img src="/static/images/{{ item.image }}" alt="{{ item.name }}" class="menu-item-img">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p><strong>Precio:</strong> ${{ item.price }}</p>
+            <!-- Botón de selección -->
+            <form method="POST" action="/seleccionar/{{ item.name }}">
+                <button type="submit" class="btn-seleccionar">Seleccionar</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Botón de "Atrás" para regresar a la página principal -->
+    <a href="/" class="btn-atras">Volver al Inicio</a>
+</section>
+{% endif %}
+
+
+
+<footer>
+    <p>&copy; 2025 AquiMenu | <a href="#">Privacidad</a> | <a href="#">Términos de servicio</a></p>
+</footer>
+
+</body>
+</html>
