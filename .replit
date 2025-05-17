@@ -22,8 +22,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "pkill python3"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
 args = "python3 codigo.py"
