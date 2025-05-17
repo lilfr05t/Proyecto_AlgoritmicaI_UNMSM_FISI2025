@@ -7,3 +7,19 @@ channel = "stable-24_05"
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 42793275
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pkill python3"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 codigo.py"
