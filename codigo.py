@@ -25,8 +25,8 @@ def menu():
     # Menú para cada día de la semana
     menus_semanales = {
         0: [  # Lunes
-            {"name": "Lunes Opción 1", "description": "Pasta Carbonara", "price": 11, "image": "plato1.png"},
-            {"name": "Lunes Opción 2", "description": "Ensalada César", "price": 11, "image": "plato2.png"}
+            {"name": "Lunes Opción 1", "description": "Pasta Carbonara", "price": 11, "image": "lunes1.png"},
+            {"name": "Lunes Opción 2", "description": "Ensalada César", "price": 11, "image": "lunes2.png"}
         ],
         1: [  # Martes
             {"name": "Martes Opción 1", "description": "Pollo al Curry", "price": 11, "image": "plato1.png"},
