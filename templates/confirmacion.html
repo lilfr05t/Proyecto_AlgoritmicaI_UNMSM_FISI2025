@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Reserva Confirmada</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="confirmacion">
+    <div class="confirmacion-contenido">
+        <h2>✅ Reserva Confirmada</h2>
+        <p><strong>Plato reservado:</strong> {{ plato }}</p>
+        <p><strong>Nombre:</strong> {{ nombre }}</p>
+        <p><strong>Correo:</strong> {{ correo }}</p>
+        <p><strong>Teléfono:</strong> {{ telefono }}</p>
+        <p><strong>Fecha y hora de reserva:</strong> {{ fecha_hora }}</p>
+        <a href="/menu" class="btn">Volver al Menú</a>
+    </div>
+</body>
+</html>

@@ -297,3 +297,213 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Contenedor del formulario de reserva */
+form {
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+  padding: 2rem 2.5rem;
+  max-width: 400px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Etiquetas (labels) */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Campos de texto, email y teléfono */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #f8d94d; /* Amarillo de botones */
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus {
+  border-color: #e8c23c; /* Amarillo más oscuro */
+  outline: none;
+}
+
+/* Botón de envío */
+form button[type="submit"] {
+  background-color: #f8d94d;
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+form button[type="submit"]:hover {
+  background-color: #e8c23c;
+}
+
+.confirmacion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Texto de detalles */
+.confirmacion p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Resaltado de datos importantes */
+.confirmacion strong {
+  color: #f8d94d;
+}
+
+.confirmacion {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+.confirmacion-contenido {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.confirmacion-contenido h2 {
+    color: green;
+    margin-bottom: 20px;
+}
+
+.confirmacion-contenido a.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* Color para las etiquetas en la sección de confirmación */
+.confirmacion p strong {
+  color: #c49b0b;  /* Ej: un dorado oscuro */
+}
+
+
+
+
+
+/* =======================
+   Panel Admin (admin.html)
+   ======================= */
+
+.admin-page {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.admin-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.admin-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.admin-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.admin-box {
+  background: #fff;
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.admin-box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.admin-box p {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.admin-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.admin-btn.download {
+  background-color: #007bff;
+}
+
+.admin-btn.delete {
+  background-color: #d9534f;
+}
+
+.admin-btn:hover {
+  opacity: 0.9;
+}
+
+.admin-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo: en pantallas pequeñas apilan verticalmente */
+@media (max-width: 700px) {
+  .admin-sections {
+    flex-direction: column;
+  }
+}
+.admin-container h1 {
+  color: white;
+}

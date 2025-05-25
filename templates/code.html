@@ -48,8 +48,11 @@
             <p>{{ item.description }}</p>
             <p><strong>Precio:</strong> ${{ item.price }}</p>
             <!-- Botón de selección -->
-            <form method="POST" action="/seleccionar/{{ item.name }}">
-                <button type="submit" class="btn-seleccionar">Seleccionar</button>
+            <!--<form method="POST" action="/seleccionar/{{ item.name }}">
+                <button type="submit" class="btn-seleccionar">Seleccionar</button>-->
+            <a href="/reservar/{{ item.name }}">
+                <button type="button" class="btn-seleccionar">Seleccionar</button>
+            </a>
             </form>
         </div>
         {% endfor %}

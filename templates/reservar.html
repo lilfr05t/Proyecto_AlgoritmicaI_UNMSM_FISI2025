@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Reservar - {{ plato }}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h2>Reservar: {{ plato }}</h2>
+
+    <form method="POST">
+        <label for="nombre">Nombre Completo:</label><br />
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+        <label for="correo">Correo Electrónico:</label><br />
+        <input type="email" id="correo" name="correo" required /><br /><br />
+
+        <label for="telefono">Número de Teléfono:</label><br />
+        <input type="tel" id="telefono" name="telefono" required /><br /><br />
+
+        <button type="submit">Confirmar Reserva</button>
+    </form>
+
+    <a href="/menu">Volver al Menú</a>
+</body>
+</html>
