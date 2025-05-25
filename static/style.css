@@ -244,10 +244,14 @@ body {
     max-width: 800px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 .nosotros-texto p {
-    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #333;
+    font-weight: 500;
 }
 
 .nosotros-botones {
