@@ -23,7 +23,7 @@ def menu():
         {
             "name": "OPCION 2",
             "description": "Descripción del plato 2",
-            "price": 12,
+            "price": 11,
             "image": "plato2.png"
         },  # Imagen PNG para opción 2
     ]
@@ -36,6 +36,11 @@ def menu():
 def seleccionar(plato):
     # Aquí podrías agregar una lógica para confirmar la selección del plato
     return f'Has seleccionado: {plato}'
+
+
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
 
 
 # Ejecutar la aplicación

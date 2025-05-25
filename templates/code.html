@@ -13,7 +13,7 @@
 <header>
     <h1>Aquimenu</h1>
     <p>Deliciosos menús a tu alcance</p>
-    
+
     <!-- Menú de navegación principal -->
     <nav>
         <a href="/">Inicio</a>
@@ -25,11 +25,13 @@
     </nav>
 
     <a href="#" class="cta">Iniciar sesión</a>
+
+    <!-- Triángulo amarillo que enlaza a /nosotros -->
+    <a href="/nosotros" class="triangulo-abajo" title="Conócenos"></a>
 </header>
 {% endif %}
 
 <!-- Menú del Día (solo se muestra en la página /menu) -->
-
 {% if menu_items %}
 <section id="menu-del-dia">
     <h2>Menú del Día</h2>
@@ -52,8 +54,6 @@
     <a href="/" class="btn-atras">Volver al Inicio</a>
 </section>
 {% endif %}
-
-
 
 <footer>
     <p>&copy; 2025 AquiMenu | <a href="#">Privacidad</a> | <a href="#">Términos de servicio</a></p>

@@ -161,7 +161,7 @@ nav a:hover {
 .btn-atras:hover {
     background-color: #e8c23c;
 }
-/* triangulo de abajo*/
+/* Triangulo de la página principal */
 .triangulo-abajo {
     width: 0;
     height: 0;
@@ -176,6 +176,7 @@ nav a:hover {
 .triangulo-abajo:hover {
     transform: scale(1.1);
 }
+
 /* Establecer el fondo global de la página */
 body {
     background-image: url('/static/images/fondo.jpg');
