@@ -211,11 +211,83 @@ body {
     background-color: #e8c23c;
 }
 
+/* Estilos para la página Nosotros */
+.nosotros-titulo {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.nosotros-body {
+    background-image: url('/static/images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.nosotros-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nosotros-texto {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    max-width: 800px;
+}
+
+.nosotros-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.nosotros-botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-reserva {
+    background-color: #b8860b;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-principal {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+    background-color: #986f0d;
+}
+
+.btn-principal:hover {
+    background-color: #45a049;
+}
 
 /* Estilo para el fondo del menú */
 #menu-del-dia {
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     margin: 2rem 0;
     border-radius: 10px;
