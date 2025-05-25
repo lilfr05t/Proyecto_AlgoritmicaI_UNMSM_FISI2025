@@ -1,0 +1,2 @@
+gunicorn codigo:app
+
