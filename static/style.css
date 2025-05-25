@@ -176,35 +176,6 @@ nav a:hover {
 .triangulo-abajo:hover {
     transform: scale(1.1);
 }
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-#nosotros-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.nosotros-preview {
-    text-align: center;
-    color: white;
-    padding: 2rem;
-}
-
-.nosotros-preview h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.nosotros-preview p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
 /* Establecer el fondo global de la página */
 body {
     background-image: url('/static/images/fondo.jpg');
