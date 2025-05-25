@@ -32,8 +32,12 @@
 {% endif %}
 
 <!-- Menú del Día (solo se muestra en la página /menu) -->
-{% if menu_items %}
+{% if request.path == "/menu" %}
 <section id="menu-del-dia">
+    {% if mensaje %}
+    <h2>{{ mensaje }}</h2>
+    <a href="/" class="btn-atras">Volver al Inicio</a>
+    {% elif menu_items %}
     <h2>Menú del Día</h2>
     <div class="menu-items">
         {% for item in menu_items %}
@@ -53,6 +57,7 @@
     <!-- Botón de "Atrás" para regresar a la página principal -->
     <a href="/" class="btn-atras">Volver al Inicio</a>
 </section>
+    {% endif %}
 {% endif %}
 
 <footer>
