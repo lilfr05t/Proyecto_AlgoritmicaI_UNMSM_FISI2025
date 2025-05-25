@@ -29,20 +29,20 @@ def menu():
             {"name": "Lunes Opción 2", "description": "Ensalada César", "price": 11, "image": "lunes2.png"}
         ],
         1: [  # Martes
-            {"name": "Martes Opción 1", "description": "Pollo al Curry", "price": 11, "image": "plato1.png"},
-            {"name": "Martes Opción 2", "description": "Risotto de Champiñones", "price": 11, "image": "plato2.png"}
+            {"name": "Martes Opción 1", "description": "Pollo al Curry", "price": 11, "image": "martes1.png"},
+            {"name": "Martes Opción 2", "description": "Risotto de Champiñones", "price": 11, "image": "martes2.png"}
         ],
         2: [  # Miércoles
-            {"name": "Miércoles Opción 1", "description": "Pescado a la Plancha", "price": 11, "image": "plato1.png"},
-            {"name": "Miércoles Opción 2", "description": "Lasaña Vegetariana", "price": 11, "image": "plato2.png"}
+            {"name": "Miércoles Opción 1", "description": "Pescado a la Plancha", "price": 11, "image": "miercoles1.png"},
+            {"name": "Miércoles Opción 2", "description": "Lasaña Vegetariana", "price": 11, "image": "miercoles2.png"}
         ],
         3: [  # Jueves
-            {"name": "Jueves Opción 1", "description": "Paella de Mariscos", "price": 11, "image": "plato1.png"},
-            {"name": "Jueves Opción 2", "description": "Hamburguesa Gourmet", "price": 11, "image": "plato2.png"}
+            {"name": "Jueves Opción 1", "description": "Paella de Mariscos", "price": 11, "image": "jueves1.png"},
+            {"name": "Jueves Opción 2", "description": "Hamburguesa Gourmet", "price": 11, "image": "jueves2.png"}
         ],
         4: [  # Viernes
-            {"name": "Viernes Opción 1", "description": "Salmón al Horno", "price": 11, "image": "plato1.png"},
-            {"name": "Viernes Opción 2", "description": "Pizza Artesanal", "price": 11, "image": "plato2.png"}
+            {"name": "Viernes Opción 1", "description": "Salmón al Horno", "price": 11, "image": "viernes1.png"},
+            {"name": "Viernes Opción 2", "description": "Pizza Artesanal", "price": 11, "image": "viernes2.png"}
         ]
     }
 
