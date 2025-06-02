@@ -1,71 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="/static/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquimenu</title>
+    <title>Aquimenu - Deliciosos Menús a tu Alcance</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="/">INICIO</a>
+            <a href="/menu">MENÚ SEMANAL</a>
+            <a href="/reservar">RESERVAR</a>
+            <a href="#reseñas">RESEÑAS</a>
+            <a href="/nosotros">NOSOTROS</a>
+            <a href="/contacto">CONTACTO</a>
+        </nav>
+        
+    
+        
+        <h1>Aquimenu</h1>
+        <p>DELICIOSOS MENÚS A TU ALCANCE</p>
+        
 
-<!-- Solo se muestra en la página principal -->
-{% if request.path == "/" %}
-<header>
-    <h1>Aquimenu</h1>
-    <p>Deliciosos menús a tu alcance</p>
-
-    <!-- Menú de navegación principal -->
-    <nav>
-        <a href="/">Inicio</a>
-        <a href="/menu">Menú del Día</a>
-        <a href="/reservar">Reservar</a>
-        <a href="/reseñas">Reseñas</a>
-        <a href="/nosotros">Nosotros</a>
-        <a href="/contacto">Contacto</a>
-    </nav>
-
-    <a href="#" class="cta">Iniciar sesión</a>
-
-    <!-- Triángulo amarillo que enlaza a /nosotros -->
-    <a href="/nosotros" class="triangulo-abajo" title="Conócenos"></a>
-</header>
-{% endif %}
-
-<!-- Menú del Día (solo se muestra en la página /menu) -->
-{% if request.path == "/menu" %}
-<section id="menu-del-dia">
-    {% if mensaje %}
-    <h2>{{ mensaje }}</h2>
-    <a href="/" class="btn-atras">Volver al Inicio</a>
-    {% elif menu_items %}
-    <h2>Menú del Día</h2>
-    <div class="menu-items">
-        {% for item in menu_items %}
-        <div class="menu-item">
-            <!-- Imagen del plato -->
-            <img src="/static/images/{{ item.image }}" alt="{{ item.name }}" class="menu-item-img">
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.description }}</p>
-            <p><strong>Precio:</strong> ${{ item.price }}</p>
-            <!-- Botón de selección -->
-            <!--<form method="POST" action="/seleccionar/{{ item.name }}">
-                <button type="submit" class="btn-seleccionar">Seleccionar</button>-->
-            <a href="/reservar/{{ item.name }}">
-                <button type="button" class="btn-seleccionar">Seleccionar</button>
-            </a>
-            </form>
-        </div>
-        {% endfor %}
-    </div>
-    <!-- Botón de "Atrás" para regresar a la página principal -->
-    <a href="/" class="btn-atras">Volver al Inicio</a>
-</section>
-    {% endif %}
-{% endif %}
-
-<footer>
-    <p>&copy; 2025 AquiMenu | <a href="#">Privacidad</a> | <a href="#">Términos de servicio</a></p>
-</footer>
-
+        
+        <a href="/nosotros" class="triangulo-abajo"></a>
+    </header>
 </body>
 </html>

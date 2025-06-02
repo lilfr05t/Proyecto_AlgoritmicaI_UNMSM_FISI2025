@@ -7,12 +7,16 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: transparent;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+/* =======================
+   PÁGINA PRINCIPAL
+   ======================= */
 
 header {
     background-image: url('/static/images/fondo.jpg');
@@ -22,13 +26,12 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    align-items: center;    /* Centrado horizontal */
+    justify-content: center;
+    align-items: center;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     width: 100%;
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding: 120px 20px 60px;
 }
 
 header h1 {
@@ -36,6 +39,7 @@ header h1 {
     letter-spacing: 5px;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
+    text-align: center;
 }
 
 header p {
@@ -43,6 +47,7 @@ header p {
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    text-align: center;
 }
 
 nav {
@@ -53,6 +58,8 @@ nav {
     display: flex;
     gap: 15px;
     z-index: 10;
+    flex-wrap: nowrap; 
+    justify-content: center;
 }
 
 nav a {
@@ -64,6 +71,7 @@ nav a {
     font-size: 1rem;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -88,80 +96,6 @@ nav a:hover {
     background-color: #e8c23c;
 }
 
-/* Estilo para el Menú del Día */
-#menu-del-dia {
-    padding: 2rem;
-    background-color: #fff;
-    text-align: center;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#menu-del-dia h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-/* Estilo para las imágenes en el menú */
-.menu-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
-}
-
-/* Si deseas limitar el tamaño de la imagen para que no ocupe todo el ancho */
-.menu-item img {
-    max-width: 100%;  /* Limita el ancho */
-    height: 200px;    /* Ajusta la altura de la imagen */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
-}
-
-
-.menu-item {
-    background-color: #f8f8f8;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.menu-item p {
-    font-size: 1rem;
-    color: #666;
-}
-/* Estilo para el botón de "Atrás" */
-.btn-atras {
-    display: inline-block;
-    background-color: #f8d94d;
-    padding: 10px 20px;
-    color: #000;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 2rem;  /* Espacio entre el menú y el botón */
-    transition: background-color 0.3s ease;
-}
-
-.btn-atras:hover {
-    background-color: #e8c23c;
-}
-/* triangulo de abajo*/
 .triangulo-abajo {
     width: 0;
     height: 0;
@@ -176,49 +110,349 @@ nav a:hover {
 .triangulo-abajo:hover {
     transform: scale(1.1);
 }
-/* Establecer el fondo global de la página */
-body {
+
+/* =======================
+   PÁGINAS GENERALES
+   ======================= */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+.page-header {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro translúcido */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.page-header h1,
+.page-header p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.page-header p {
+    color: white !important;
+    text-shadow: 1px 1px 3px black;
+}
+
+
+
+
+/* =======================
+   PÁGINA DE RESERVAR
+   ======================= */
+
+.reservar-page {
     background-image: url('/static/images/fondo.jpg');
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
 }
 
-/* Estilo para las imágenes en el menú */
-.menu-item img {
+body.menu-page {
+    background-image: url('/static/images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-page .container {
+    background-color: rgba(255, 255, 255, 0.9); /* fondo blanco con transparencia */
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-page h1 {
+    color: #333;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.menu-del-dia {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.menu-del-dia h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-img {
     width: 100%;
-    height: 200px; /* Ajustamos la altura de las imágenes */
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+    height: 180px; 
+    object-fit: contain; 
+    background-color: #f8f9fa; 
 }
 
-/* Estilo para el botón de Seleccionar */
+.menu-item-content {
+    padding: 1.5rem;
+}
+
+.menu-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-item .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.menu-item .precio {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
 .btn-seleccionar {
     display: inline-block;
     background-color: #f8d94d;
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: #000;
     border-radius: 30px;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-    border: none;  /* Eliminar el borde negro */
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
 }
 
 .btn-seleccionar:hover {
     background-color: #e8c23c;
+    transform: translateY(-2px);
 }
 
-/* Estilos para la página Nosotros */
-.nosotros-titulo {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 2rem;
-    font-family: 'Playfair Display', serif;
-    line-height: 1.2;
+/* =======================
+   FORMULARIO DE RESERVA
+   ======================= */
+
+.formulario-page {
+    background-image: url('/static/images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 3rem;  /* Aumenta este valor si el formulario sigue muy abajo */
 }
+
+.formulario-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.formulario-header h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.formulario-header p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.form-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+
+.reserva-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+    max-width: 500px;
+
+    /* Elimina margen innecesario */
+    margin: 0 auto;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f8d94d;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #e8c23c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(248, 217, 77, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-confirmar {
+    flex: 1;
+    background-color: #f8d94d;
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #e8c23c;
+    transform: translateY(-2px);
+}
+
+.btn-cancelar {
+    flex: 1;
+    background-color: #666;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cancelar:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* =======================
+   MENSAJES Y NAVEGACIÓN
+   ======================= */
+
+.mensaje-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-atras {
+    display: inline-block;
+    background-color: #f8d94d;
+    padding: 12px 24px;
+    color: #000;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-atras:hover {
+    background-color: #e8c23c;
+    transform: translateY(-2px);
+}
+
+/* =======================
+   PÁGINA NOSOTROS
+   ======================= */
 
 .nosotros-body {
     background-image: url('/static/images/fondo.jpg');
@@ -234,6 +468,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.nosotros-titulo {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
 }
 
 .nosotros-texto {
@@ -258,6 +500,7 @@ body {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .btn-reserva {
@@ -288,98 +531,19 @@ body {
     background-color: #45a049;
 }
 
-/* Estilo para el fondo del menú */
-#menu-del-dia {
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor del formulario de reserva */
-form {
-  background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
-  padding: 2rem 2.5rem;
-  max-width: 400px;
-  margin: 3rem auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
-/* Etiquetas (labels) */
-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Campos de texto, email y teléfono */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"] {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 1.5rem;
-  border: 2px solid #f8d94d; /* Amarillo de botones */
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  box-sizing: border-box;
-}
-
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="tel"]:focus {
-  border-color: #e8c23c; /* Amarillo más oscuro */
-  outline: none;
-}
-
-/* Botón de envío */
-form button[type="submit"] {
-  background-color: #f8d94d;
-  color: #000;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-form button[type="submit"]:hover {
-  background-color: #e8c23c;
-}
-
-.confirmacion h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #222;
-}
-
-/* Texto de detalles */
-.confirmacion p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-/* Resaltado de datos importantes */
-.confirmacion strong {
-  color: #f8d94d;
-}
+/* =======================
+   CONFIRMACIÓN
+   ======================= */
 
 .confirmacion {
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #d9dae4, #2a3b4c);
     font-family: Arial, sans-serif;
+    min-height: 100vh;
     padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
 }
 
 .confirmacion-contenido {
@@ -395,6 +559,17 @@ form button[type="submit"]:hover {
 .confirmacion-contenido h2 {
     color: green;
     margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.confirmacion-contenido p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.confirmacion-contenido strong {
+    color: #c49b0b;
 }
 
 .confirmacion-contenido a.btn {
@@ -406,104 +581,112 @@ form button[type="submit"]:hover {
     text-decoration: none;
     border-radius: 5px;
 }
-/* Color para las etiquetas en la sección de confirmación */
-.confirmacion p strong {
-  color: #c49b0b;  /* Ej: un dorado oscuro */
-}
-
-
-
-
 
 /* =======================
-   Panel Admin (admin.html)
+   PANEL ADMIN
    ======================= */
 
 .admin-page {
-  background-color: #f5f5f5;
-  min-height: 100vh;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
-  color: #333;
+     background: linear-gradient(to right, #d7e1ec, #f5f7fa);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #464646;
 }
 
 .admin-container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
 }
 
 .admin-container h1 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .admin-sections {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .admin-box {
-  background: #fff;
-  flex: 1 1 300px;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .admin-box h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Playfair Display', serif;
 }
 
 .admin-box p {
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .admin-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s ease;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .admin-btn.download {
-  background-color: #007bff;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.admin-btn.download:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
 }
 
 .admin-btn.delete {
-  background-color: #d9534f;
+    background-color: #f44336;
+    color: white;
 }
 
-.admin-btn:hover {
-  opacity: 0.9;
+.admin-btn.delete:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
 }
 
 .admin-link {
-  display: inline-block;
-  margin-top: 2rem;
-  color: #555;
-  text-decoration: none;
-  font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #f8d94d;
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .admin-link:hover {
-  text-decoration: underline;
+    background-color: #e8c23c;
+    transform: translateY(-2px);
 }
 
-/* Responsivo: en pantallas pequeñas apilan verticalmente */
-@media (max-width: 700px) {
-  .admin-sections {
-    flex-direction: column;
-  }
-}
-.admin-container h1 {
-  color: white;
-}
